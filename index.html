@@ -1,19 +1,23 @@
-<h1></h1>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jhonatan David Rodriguez Meza">
-    <meta name="description" content="Jhonatan David Rodriguez Meza - Estudiante de Administración de Empresas en la UCSP. Descubre su formación académica, habilidades, contactos y más.">
-    <title>Jhonatan David Rodriguez Meza - Administración | UCSP</title>
+    <title>Jhonatan David Rodriguez Meza | Administración de Empresas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --beige: #f5f5dc;
-            --light-beige: #fafafa;
-            --dark-beige: #e0d8c0;
-            --text-color: #333;
-            --accent: #5a4e41;
+            --primary: #8B6B61; /* Marrón claro */
+            --secondary: #A17A69; /* Marrón medio */
+            --accent: #6D4C41; /* Marrón oscuro */
+            --light: #F5F0E5; /* Beige claro */
+            --dark: #4E342E; /* Marrón muy oscuro */
+            --text: #3E2723; /* Color de texto principal */
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+            --border: 1px solid rgba(109, 76, 65, 0.15);
+            --vintage-pattern: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238b6b61' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
         
         * {
@@ -23,32 +27,57 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--beige);
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--light);
+            background-image: var(--vintage-pattern);
+            min-height: 100vh;
             padding: 20px;
+        }
+        
+        .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 40px auto;
+            background: rgba(255, 253, 249, 0.95);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: var(--border);
+            position: relative;
+            z-index: 1;
         }
         
         header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
             text-align: center;
-            padding: 30px 0;
-            margin-bottom: 30px;
-            background-color: var(--light-beige);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 50px 20px 40px;
+            position: relative;
+            overflow: hidden;
         }
         
-        /* ESPACIO PARA LA IMAGEN - Reemplaza la ruta actual con tu imagen */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
         .profile-photo {
             width: 180px;
             height: 180px;
             border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
             overflow: hidden;
             margin: 0 auto 20px;
-            border: 5px solid var(--dark-beige);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
         }
         
         .profile-photo img {
@@ -58,165 +87,460 @@
         }
         
         h1 {
-            font-size: 2.5rem;
-            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
             margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         
         .subtitle {
-            font-size: 1.2rem;
-            color: #666;
+            font-size: 1.3rem;
+            opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            font-weight: 300;
         }
         
-        section {
-            background-color: var(--light-beige);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            position: relative;
+            z-index: 2;
         }
         
-        h2 {
-            color: var(--accent);
-            border-bottom: 2px solid var(--dark-beige);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-        
-        ul {
-            padding-left: 30px;
-            margin-bottom: 15px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .contact-info ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .contact-info li {
-            margin-bottom: 12px;
-        }
-        
-        a {
-            color: #4169e1;
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
-        a:hover {
-            color: #1e40af;
-            text-decoration: underline;
+        .social-icons a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            color: #666;
-            font-size: 0.9rem;
-            background-color: var(--light-beige);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .skill-star {
-            color: #e6b400;
+        main {
+            padding: 40px;
         }
         
         .section-title {
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            font-size: 2.1rem;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .section-content {
+            margin-bottom: 50px;
+        }
+        
+        .personal-description {
+            background: rgba(245, 240, 229, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--primary);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .personal-description::before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 120px;
+            color: rgba(139, 107, 97, 0.1);
+            line-height: 1;
+            z-index: 0;
+        }
+        
+        .personal-description p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text);
+            position: relative;
+            z-index: 1;
+            font-weight: 400;
+        }
+        
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .university-info {
+            background: rgba(245, 240, 229, 0.7);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary);
+            box-shadow: var(--shadow);
+        }
+        
+        .university-info p {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+            color: var(--dark);
+        }
+        
+        li:before {
+            content: "•";
+            color: var(--primary);
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: -3px;
+        }
+        
+        .contact-list li:before {
+            content: none;
+        }
+        
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-left: 0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-list i {
+            color: var(--primary);
+            width: 30px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .person-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: var(--border);
+            position: relative;
+        }
+        
+        .person-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+        
+        .person-card a {
+            text-decoration: none;
+            color: var(--dark);
+            display: block;
+            padding: 25px;
+            height: 100%;
+        }
+        
+        .person-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
-        .section-title::before {
-            content: "•";
-            color: var(--accent);
-            font-size: 2rem;
+        .person-card p {
+            font-size: 0.95rem;
+            color: var(--secondary);
+            font-style: italic;
+            padding-left: 34px;
+        }
+        
+        .person-card i {
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        @media (max-width: 900px) {
+            .people-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
         }
         
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
+            .people-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+            
+            main {
+                padding: 30px 20px;
+            }
+            
+            .personal-description {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 30px 15px;
+            }
+            
+            .profile-photo {
+                width: 150px;
+                height: 150px;
             }
             
             .subtitle {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             
-            section {
-                padding: 20px 15px;
+            .personal-description p {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="profile-photo">
-            <img src="https://media.licdn.com/dms/image/v2/D4D03AQHXZBWI7NLieQ/profile-displayphoto-scale_200_200/B4DZejI3frGkAc-/0/1750788701302?e=1756339200&v=beta&t=FEzAe8znpkERpNof2QR_-_lj5EREC4XLGR7WJk1aWcQ" alt="Foto de Jhonatan David Rodriguez Meza"> 
-        </div>
-        <h1>Jhonatan David Rodriguez Meza</h1>
-        <p class="subtitle">Estudiante de Administración de Empresas en la Universidad Católica San Pablo - Arequipa, Perú.</p>
-    </header>
-
-    <section>
-        <h2 class="section-title">Cursos que estoy llevando</h2>
-        <p><strong>Universidad Católica San Pablo (UCSP) – Arequipa</strong><br>Carrera: Administración de Empresas</p>
-        <ul>
-            <li>Historia del occidente II</li>
-            <li>Análisis financiero</li>
-            <li>Comportamiento del consumidor</li>
-            <li>Música y Artes visuales</li>
-            <li>Filosofía de la naturaleza</li>
-            <li>Introducción a la ciencia de la computación</li>
-            <li>Liderazgo</li>
-        </ul>
-
-
-    <section>
-        <h2 class="section-title">Contactos</h2>
-        <ul>
-            <li>Telefono : +51 968488292 <span class="skill-star">📞</span></li>
-            <li>Correo: jhonatan.rodriguez@ucsp.edu.pe <span class="skill-star">✉️</span></li>
-            <li><a href="https://www.linkedin.com/in/jhonatan-david-rodriguez-meza-b4a347313/?originalSubdomain=pe" target="_blank" rel="dofollow">LinkedIn</a></li>
-        </ul>
-    </section>
-
-    <section>
-        <h2 class="section-title">Compañeros de Universidad</h2>
-        <ul>
-
-            <li><a href="https://www.linkedin.com/in/william-ra%C3%BAl-sullasi-mogrovejo-a17074358/" target="_blank" rel="dofollow">William Raúl Sullasi Mogrovejo</a></li>
-            <li><a href="https://rodrigoportugalpachas.github.io/" target="_blank" rel="dofollow">Rodrigo Portugal Pachas</a></li>
-            <li><a href="https://brenda-berenice-rojas-rodriguez.github.io/" target="_blank" rel="dofollow">Brenda Berenice Rojas Rodriguez</a></li>
-            <li><a href="https://jhony241.github.io/Jhon-Ronald-Quispe-Mendoza.github.io/" target="_blank" rel="dofollow">Jhon Ronald Quispe Mendoza</a></li>
-            <li><a href="https://christopher110011.github.io/mipagina/" target="_blank" rel="dofollow">Christopher Steve Ramírez Pacora</a></li>
-            <li><a href="https://dagh-beep.github.io/duanygonzales.github.io/" rel="dofollow">Duany Alexia Gonzales Hilares</a></li>
-            <li><a href="https://claudia-flores-qbob.github.io/" rel="dofollow">Claudia Flores Garnica</a></li>
-            <li><a href="https://arielyugra100.github.io/Ariel-Patricio-Yugra-Salda-a/" rel="dofollow">Ariel Patricio Yugra Saldaña</a></li>
-          
-        </ul>
-    </section>
-
-   
-
-    <footer>
-        <p>© <span id="year">2025</span> Todos los derechos reservados para Jhonatan David Rodriguez Meza</p>
-    </footer>
-
+    <div class="container">
+        <header>
+            <div class="profile-photo">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQHXZBWI7NLieQ/profile-displayphoto-scale_200_200/B4DZejI3frGkAc-/0/1750788701302?e=1756339200&v=beta&t=FEzAe8znpkERpNof2QR_-_lj5EREC4XLGR7WJk1aWcQ" alt="Foto de Jhonatan David Rodriguez Meza"> 
+            </div>
+            <h1>Jhonatan David Rodriguez Meza</h1>
+            <p class="subtitle">Estudiante de Administración de Empresas en la Universidad Católica San Pablo - Arequipa, Perú.</p>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/jhonatan-david-rodriguez-meza-b4a347313/?originalSubdomain=pe" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:jhonatan.rodriguez@ucsp.edu.pe" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+51968488292" aria-label="Teléfono">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </header>
+        
+        <main>
+            <section class="section-content">
+                <h2 class="section-title">Descripción Personal</h2>
+                <div class="personal-description">
+                    <p>¡Hola! Soy Jhonatan, estudiante de la carrera profesional de Administración de Empresas, con gran interés por el mundo de los negocios y finanzas. Poseo experiencia en trabajos menores como expositor en la Feria Internacional de Arequipa (FIA 2024) y otras actividades relacionadas con el ámbito empresarial. Mi objetivo es desarrollar habilidades de liderazgo y gestión que me permitan contribuir al crecimiento de organizaciones en el futuro.</p>
+                </div>
+            </section>
+            
+            <section class="section-content">
+                <h2 class="section-title">Cursos Actuales</h2>
+                <div class="university-info">
+                    <p><strong>Universidad Católica San Pablo (UCSP) – Arequipa</strong><br>Carrera: Administración de Empresas</p>
+                </div>
+                <ul>
+                    <li>Historia del occidente II</li>
+                    <li>Análisis financiero</li>
+                    <li>Comportamiento del consumidor</li>
+                    <li>Música y Artes visuales</li>
+                    <li>Filosofía de la naturaleza</li>
+                    <li>Introducción a la ciencia de la computación</li>
+                    <li>Liderazgo</li>
+                </ul>
+            </section>
+            
+            <section class="section-content">
+                <h2 class="section-title">Contacto</h2>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone"></i> +51 968488292</li>
+                    <li><i class="fas fa-envelope"></i> jhonatan.rodriguez@ucsp.edu.pe</li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/jhonatan-david-rodriguez-meza-b4a347313/?originalSubdomain=pe" target="_blank">LinkedIn</a></li>
+                </ul>
+            </section>
+            
+            <section class="section-content">
+                <h2 class="section-title">Profesores</h2>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <a href="https://www.linkedin.com/in/ecuadrosv/" rel="dofollow">
+                            <h3><i class="fas fa-chalkboard-teacher"></i> Prof. Ernesto Cuadros Vargas</h3>
+                            <p>Introduccion a la ciencia de la computacion</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://www.linkedin.com/in/mar%C3%ADa-bel%C3%A9n-bocchio-linares-96846035/" target="_blank" rel="dofollow">
+                            <h3><i class="fas fa-chalkboard-teacher"></i> Prof. Maria Bocchio Linares</h3>
+                            <p>Analisis financiero</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://www.linkedin.com/in/pablo-nu%C3%B1ez-saija-08b892174/" rel="dofollow">
+                            <h3><i class="fas fa-chalkboard-teacher"></i> Prof. Pablo Nuñez Saija</h3>
+                            <p>Liderazgo</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://www.linkedin.com/in/profesor-ejemplo-4" target="_blank" rel="dofollow">
+                            <h3><i class="fas fa-chalkboard-teacher"></i> Prof. Miguel Salomon Valdivia</h3>
+                            <p>Comportamiento del consumidor</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-content">
+                <h2 class="section-title">Compañeros de Universidad</h2>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <a href="https://www.linkedin.com/in/william-ra%C3%BAl-sullasi-mogrovejo-a17074358/" target="_blank" rel="dofollow">
+                            <h3><i class="fas fa-user-graduate"></i> William Raúl Sullasi Mogrovejo</h3>
+                            <p>Compañero de Administración</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://rodrigoportugalpachas.github.io/" target="_blank" rel="dofollow">
+                            <h3><i class="fas fa-user-graduate"></i> Rodrigo Portugal Pachas</h3>
+                            <p>Compañero de Administración</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://brenda-berenice-rojas-rodriguez.github.io/" target="_blank" rel="dofollow">
+                            <h3><i class="fas fa-user-graduate"></i> Brenda Berenice Rojas Rodriguez</h3>
+                            <p>Compañera de Administración</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://jhony241.github.io/Jhon-Ronald-Quispe-Mendoza.github.io/" target="_blank" rel="dofollow">
+                            <h3><i class="fas fa-user-graduate"></i> Jhon Ronald Quispe Mendoza</h3>
+                            <p>Compañero de Administración</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://christopher110011.github.io/mipagina/" target="_blank" rel="dofollow">
+                            <h3><i class="fas fa-user-graduate"></i> Christopher Steve Ramírez Pacora</h3>
+                            <p>Compañero de Administración</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://dagh-beep.github.io/duanygonzales.github.io/" rel="dofollow">
+                            <h3><i class="fas fa-user-graduate"></i> Duany Alexia Gonzales Hilares</h3>
+                            <p>Compañera de Administración</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://claudia-flores-qbob.github.io/" rel="dofollow">
+                            <h3><i class="fas fa-user-graduate"></i> Claudia Flores Garnica</h3>
+                            <p>Compañera de Administración</p>
+                        </a>
+                    </div>
+                    <div class="person-card">
+                        <a href="https://arielyugra100.github.io/Ariel-Patricio-Yugra-Salda-a/" rel="dofollow">
+                            <h3><i class="fas fa-user-graduate"></i> Ariel Patricio Yugra Saldaña</h3>
+                            <p>Compañero de Administración</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© <span id="year">2025</span> Todos los derechos reservados para Jhonatan David Rodriguez Meza</p>
+        </footer>
+    </div>
+    
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
+        
+        // Efecto de desplazamiento suave para los enlaces
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Efecto de aparición para las secciones
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.section-content').forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
